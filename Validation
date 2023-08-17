@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script>
+            function valid()
+            {
+                var name=document.getElementById("txtname").value;
+                var email=txtemail.value;
+                if(name!="" && email!="")
+                {
+                    var len=name.length;
+                    if(len>4) //1,2,3
+                {
+                    return true;
+                }
+                else
+                {
+                    spname.innerText="Name should be greater than 4";
+                    spname.style.color="red";
+                    return false;
+                }
+                return true;
+                }
+                else
+                {
+                    spname.innerText="Please Enter Name";
+                    spname.style.color="red";
+                    spemail.innerText="Please Enter Email";
+                    spemail.style.color="red";
+                    return false;
+                }
+                return false;
+            } 
+        </script>
+    </head>
+    <body>
+        <div class="container">
+        <div class="row">
+        <div class="col-sm-12">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6 btn-success">
+        <form action="#" method="post" onsubmit="return valid()">
+        Enter name:
+        <input type="text" class="form-control" id="txtname">
+        <span id="spname"></span>
+        Enter email:
+        <input type="text" class="form-control" id="txtemail">
+        <span id="spemail"></span>
+        <br>
+        <input type="submit"value="Validate Now" class="btn btn-danger">
+    </form>
+        </div>
+        <div class="col-sm-3"></div>
+        </div>
+        </div>
+        </div>
+    </body>
+</html>
