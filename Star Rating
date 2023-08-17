@@ -1,0 +1,96 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <style>
+        .fa-star
+        {
+            font-size: 45px;color: goldenrod;cursor: pointer;
+        }
+        #sp1,#sp2,#sp3,#sp4,#sp5
+        {
+            display: none;
+        }
+    </style>
+    <script>
+        var totle="";
+        function star1()
+        {
+            var total=sp1.innerText;
+            s1.style.color="black";
+            s2.style.color="goldenrod";
+            s3.style.color="goldenrod";
+            s4.style.color="goldenrod";
+            s5.style.color="goldenrod";
+            txttotal.value=total;
+        }
+        function star2()
+        {
+            var total=sp2.innerText;
+            s1.style.color="black";
+            s2.style.color="black";
+            s3.style.color="goldenrod";
+            s4.style.color="goldenrod";
+            s5.style.color="goldenrod";
+            txttotal.value=total;
+        }
+        function star3()
+        {
+            var total=sp3.innerText;
+            s1.style.color="black";
+            s2.style.color="black";
+            s3.style.color="black";
+            s4.style.color="goldenrod";
+            s5.style.color="goldenrod";
+            txttotal.value=total;
+        }
+        function star4()
+        {
+            var total=sp4.innerText;
+            s1.style.color="black";
+            s1.style.color="black";
+            s1.style.color="black";
+            s1.style.color="black";
+            s1.style.color="goldenrod";
+            txttotal.value=total;
+        }
+        function star5()
+        {
+            var total=sp5.innerText;
+            s1.style.color="black";
+            s2.style.color="black";
+            s3.style.color="black";
+            s4.style.color="black";
+            s5.style.color="black";
+            txttotal.value=total;
+        }
+    </script>
+    </head>
+    <body>
+<h1>Example of star Rating using JavaScript</h1><hr>
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-12">
+<div class="col-sm-4 panel panel-body">
+Rate Now:<br>
+<span class="fa fa-star" id="s1" onclick="star1()"></span>
+<span class="fa fa-star" id="s2" onclick="star2()"></span>
+<span class="fa fa-star" id="s3" onclick="star3()"></span>
+<span class="fa fa-star" id="s4" onclick="star4()"></span>
+<span class="fa fa-star" id="s5" onclick="star5()"></span>
+<span class="fa fa-star" id=sp1>1</span>
+<span class="fa fa-star" id=sp2>3</span>
+<span class="fa fa-star" id=sp3>3</span>
+<span class="fa fa-star" id=sp4>5</span>
+<span class="fa fa-star" id=sp5>5</span><br>
+write your Reviews:
+<textarea class="form-control" style="height: 160px;"></textarea><br>
+<input type="button" value="Review Now" class="btn-info form-control">
+<input type="text" id="txttotal">
+</div>
+<div class="col-sm-4"></div>
+</div>
+</div>
+</div>
+    </body>
+</html>
