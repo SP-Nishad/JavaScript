@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script>
+            function add()
+            {
+                var n1=parseInt(txt1.value);
+                var n2=parseInt(txt2.value);
+                txt3.value="Addition is:"+(n1+n2);
+                txt3.style.color="red";
+            }
+            function sub()
+            {
+                var n1=parseInt(txt1.value);
+                var n2=parseInt(txt2.value);
+                txt3.value="Subtraction is:"+(n1-n2);
+                txt3.style.color="yellow";
+            }
+            function mul()
+            {
+                var n1=parseInt(txt1.value);
+                var n2=parseInt(txt2.value);
+                txt3.value="Multiplaction is:"+(n1*n2);
+                txt3.style.color="green";
+            }
+            function div()
+            {
+                var n1=parseInt(txt1.value);
+                var n2=parseInt(txt2.value);
+                txt3.value="Division is:"+(n1/n2);
+                txt3.style.color="indigo";
+            }
+            function rem()
+            {
+                var n1=parseInt(txt1.value);
+                var n2=parseInt(txt2.value);
+                txt3.value="Remainder is:"+(n1%n2);
+                txt3.style.color="gray";
+            }
+            function per()
+            {
+                var n1=parseInt(txt1.value);
+                var n2=parseInt(txt2.value);
+                txt3.value="Percentage is:"+((n1/n2)*100);
+                txt3.style.color="teal";
+            }
+            function clr()
+            {
+                txt1.value="";
+                txt2.value="";
+                txt3.value="";
+                txt3.style.color="teal";
+            }
+        </script>
+    </head>
+    <body>
+    <h1 class="text-center">Example of small calculator using Javascript</h1><hr>
+     <div class="container-fluid">
+        <div class="row">
+        <div class="col-sm-12">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 panel panel-body"
+        style="box-shadow: 5px 5px 15px 5px teal">
+        Enter first number:
+        <input type="text" id="txt1" class="form-control"><br>
+        Enter second number:
+        <input type="text" id="txt2" class="form-control"><br>
+        Display Result:
+    <input type="text" id="txt3" class="form-control"><br>
+    <input type="button" value="+" class="btn btn-success" onclick="add()">
+    <input type="button" value="-" class="btn btn-danger" onclick="sub()">
+    <input type="button" value="*" class="btn btn-info" onclick="mul()">
+    <input type="button" value="/" class="btn btn-warning" onclick="div()">
+    <input type="button" value="%" class="btn btn-danger" onclick="rem()">
+    <input type="button" value="Percent" class="btn btn-info" onclick="per()">
+    <input type="button" value="All Clear" class="btn btn-success" onclick="clr()">
+    </div>
+    <div class="col-sm-4"></div>
+    </div>
+    </div>
+    </div>
+    </body>
+</html>
