@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <style>
+            table {
+              border-collapse: collapse;
+            }
+        </style>
+        <script>
+            function add()
+            {
+                var t1=Number(text1.value);
+                var t2=Number(text2.value);
+                btn1.style.backgroundColor="red";
+                Show.innerText="Addition is:"+(t1+t2);
+                
+            }
+            function subtraction()
+            {
+                var t1=Number(text1.value);
+                var t2=Number(text2.value);
+                btn2.style.backgroundColor="blue";
+                Show.innerText="subtraction is:"+(t1-t2);  
+            }
+            function multiplication()
+            {
+                var t1=Number(text1.value);
+                var t2=Number(text2.value);
+                btn3.style.backgroundColor="yellow";
+                Show.innerText="multiplication is:"+(t1*t2);
+                   
+            }
+            function division()
+            {
+                var t1=Number(text1.value);
+                var t2=Number(text2.value);
+                btn4.style.backgroundColor="green";
+                Show.innerText="division is:"+(t1/t2);   
+            }
+            function percentage()
+            {
+                var t1=Number(text1.value);
+                var t2=Number(text2.value);
+                btn5.style.backgroundColor="gray";
+                Show.innerText="percentage is:%"+(t1%t2);
+            }
+            function allclear()
+            {
+            text1.value="";
+            text2.value="";
+            btn6.style.backgroundColor="orange"
+            show.innerText="";
+            }
+           
+        </script>
+    </head>
+    <body onload="document.body.style.backgroundColor='silver'">
+        <h1 align="center">Example of small calculator</h1>
+        <hr>
+        <fieldset>
+            <legend align="center">Small Calculator</legend>
+            <table align="center" border="1">
+        <tr>
+            <td>Enter First Number</td>
+            <td><input type="text" id="text1"></td>
+        </tr>
+        <tr>
+            <td>Enter Second Number</td>
+            <td>
+                <input type="text" id="text2">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span id="Show"></span>
+            </td>
+            <td>
+                <input type="button" id="btn1" value="+" onclick="add()">
+                <input type="button" id="btn2" value="-" onclick="subtraction()">
+                <input type="button" id="btn3" value="*" onclick="multiplication()">
+                <input type="button" id="btn4" value="/" onclick="division()">
+                <input type="button" id="btn5" value="%" onclick="percentage()">
+                <input type="button" id="btn6" value="C" onclick="allclear()">
+            </td>
+        </tr>
+    </body>
+</html>
