@@ -1,0 +1,46 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var tbl="";
+            tbl+="<table border='1' cellpadding='20px' cellspacing='0px' align='center' bordercolor='red'>";
+                for(r=1;r<=8;r++)
+                {
+                    if(r%2==0)
+                    {
+                        tbl+="<tr>";
+                        for(c=1;c<=8;c++)
+                        {
+                            if(c%2==0)
+                            {
+                                tbl+="<td bgcolor='black'></td>";
+                            }
+                            else
+                            {
+                                tbl+="<td bgcolor='white'></td>";
+                            }
+                        }
+                    }
+                    else
+                    {
+                        tbl+="<tr>";
+                        for(c=1;c<=8;c++)
+                        {
+                            if(c%2==0)
+                            {
+                                tbl+="<td bgcolor='white'></td>";
+                            }
+                            else
+                            {
+                                tbl+="<td bgcolor='black'></td>";
+                            }
+                        }
+                    }
+                    tbl+="</tr>";
+                }
+                tbl+="</table>";
+                document.write(tbl);
+        </script>
+        <h1 align="center">Chess Board Using JavaScript</h1>
+    </body>
+</html>
