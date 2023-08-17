@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script>
+            function show()
+            {
+                var psd=txt1.type;
+                if(psd=='password')
+                {
+                    btn1.value="Hide";
+                    txt1.type="text";
+                }
+                else
+                {
+                    btn1.value="show";
+                    txt1.type="password";
+                }
+            }
+            function valid()
+            {
+                var pass=txt1.value;
+                if(pass!=null && pass!="")
+                {
+                    var len="";
+                    var pass=txt1.value;
+                    len=pass.length;
+                    if(pass!=null && pass!="")
+                    {
+                        if(len>0 && len<=4)
+                        {
+                            sp.innerText="password to week";
+                            sp.style.color="red";
+                        }
+                        else if(len>=5 && len<=8)
+                        {
+                        sp.innerText="password to medium";
+                            sp.style.color="teal"
+                        }
+                        else
+                        {
+                            sp.innerText="password to strong";
+                            sp.style.color="green"; 
+                        }
+                    }
+                    else
+                    {
+                        sp.innerText="Pleas enter password";
+                        sp.style.color="red"
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+       <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4 panel panel-body"
+            style="margin-top: 10%; box-shadow: 5px 5px 5px 5px forestgreen;">
+            <h5 class="panel panel-heading">
+            Example of Hide and Show Password</h5>
+            <div class="col-sm-10">
+            Enter Password here:
+    <input type="password" id="txt1" class="form-control"
+    onkeyup="valid()">
+    <span id="sp"></span>                
+             </div>
+             <div class="col-sm-2"> <br>
+    <input type="button" value="show" class="btn
+    btn-success" id="btn1" style="margin-top: 3%;" onclick="show()">
+
+            </div>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div>
+       </div> 
+    </body>
+</html>
