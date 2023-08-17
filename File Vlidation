@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script>
+            function valid()
+            {
+                var pic=fupic.value;
+                var cut=pic.substr(pic.lastIndexOf('.')+1);
+                var cc=cut.toLowerCase();
+                if(cc=='jpg' || cc=='jpeg' || cc=='png')
+                {
+                    return true;
+                }
+                else
+                {
+                    sp.innerText="file should be jpg,png,jpeg extension only";
+                    sp.style.color="red";
+                    return false;
+                }
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+        <div class="row">
+        <div class="col-sm-12">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6 panel-body btn-success">
+        Select file:
+        <form action="#" method="post" onsubmit="return valid()">
+        <input type="file" id="fupic" class="form-control"><br>
+        <input type="submit" value="Valid Now" class="form-control">
+        <span id="sp"></span>
+        </form>
+    </div>
+    <div class="col-sm-3"></div>
+    </div>
+    </div>
+    </div>
+    </body>
+</html>
